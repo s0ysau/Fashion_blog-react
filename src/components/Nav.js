@@ -1,26 +1,40 @@
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
-export default function Nav (props) {
+export default function Nav () {
   return (
-    <h4>
-      <Link to="/">
-        <div>Women's</div>
-      </Link>
-      <Link to="/">
-        <div>Men's</div>
-      </Link>
-      <Link to="/">
-        <div>On The Street</div>
-      </Link>
-      <Link to="/">
-        <div>The Catwalk</div>
-      </Link>
-      <Link to="/">
-        <div>Adwatch</div>
-      </Link>
-      <Link to="/">
-        <div>About</div>
-      </Link>
-    </h4>
+    <div className='nav' aria-label='Main Navigation' role='navigation'>
+      <ul className='nav-container'>
+        <li className='links'>
+          <Link to='/'>
+            <div className='link-name'>Women's</div>
+          </Link>
+        </li>
+        <li className='links'>
+          <Link to='/'>
+            <div className='link-name'>Men's</div>
+          </Link>
+        </li>
+        <li className='links'>
+          <Link to='/'>
+            <div className='link-name'>On The Street</div>
+          </Link>
+        </li>
+        <li className='links'>
+          <Link to='/'>
+            <div className='link-name'>The Catwalk</div>
+          </Link>
+        </li>
+        <li className='links'>
+          <Link to='/'>
+            <div className='link-name'>Adwatch</div>
+          </Link>
+        </li>
+        <li className='links'>
+          <Link to='/'>
+            <div className='link-name'>About</div>
+          </Link>
+        </li>
+      </ul>
+    </div>
   )
 }
