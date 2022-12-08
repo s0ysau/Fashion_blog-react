@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css" 
+import postArr from "./data"
+import Article from "./components/Article";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-function App() {
+console.log(postArr)
+
+const post = postArr.map((ele, idx) => {
+  return (
+    <Article
+    key={idx}
+    date={ele.date}
+    title={ele.title}
+    img={ele.img}
+    post={ele.post}
+    />
+  )
+})
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="main-title">Sartre's List</h1>
+      <h3>Better-Dressed People</h3>
+      <Header />
+      <section>{post}</section>
+      <Footer />
     </div>
   );
 }
 
-export default App;
+
